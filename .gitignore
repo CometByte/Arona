@@ -1,0 +1,21 @@
+# Files
+.env
+*.code-workspace
+config.json
+database.json
+database.dev.json
+database.prod.json
+config.dev.json
+config.prod.json
+
+# Folders
+/backup-codes
+
+# Defaults
+.vagrant/
+.vscode
+
+/bin/*
+/node_modules/*
+storage/
+
