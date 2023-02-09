@@ -9,7 +9,7 @@ module.exports = async (client) => {
     // validate channel
     if (!channel) return;
 
-    const currentTime = new Date().toLocaleTimeString('it-IT');
+    const currentTime = new Date().toLocaleTimeString('it-IT', { timeZone: 'Asia/Manila' });
     let greeting = "Hello, Sensei!";
 
     console.log(`CurrentTime: ${currentTime}`);
