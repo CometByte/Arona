@@ -15,11 +15,11 @@ module.exports = async (client) => {
     console.log(`CurrentTime: ${currentTime}`);
 
     // 5am to 12pm - Morning
-    if (currentTime >= "05:00:00" && currentTime < "11:00:00")
+    if (currentTime >= "05:00:00" && currentTime < "12:00:00")
         greeting = "Good morning, Sensei!";
 
     // 12pm - Noon
-    if (currentTime == "12:00:00" && currentTime < "12:00:00")
+    if (currentTime == "12:00:00")
         greeting = "Good noon, Sensei! Have you eaten lunch yet?";
 
     // 1pm to 5pm - Afternoon
