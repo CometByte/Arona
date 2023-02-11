@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = async (client) => {
 
-    console.log("📋 mudae-reset executed!");
+    console.log("📋 global-reset executed!");
     // fetch channel id
     const channel = await client.channels.fetch(process.env.REMINDER_CHANNEL_ID);
 
@@ -11,6 +11,6 @@ module.exports = async (client) => {
 
     // message
     channel.send({
-        content: "It's time for the daily mudae reset, Sensei!"
+        content: "Sensei! The day has been reset. Log in rewards are ready to be pick up."
     });
 }

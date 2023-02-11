@@ -8,6 +8,8 @@ module.exports = async (client) => {
         const localCommands = getLocalCommands();
         const applicationCommands = await getApplicationCommands(client, testServer);
 
+        console.log('\n🔁 Registering commands...');
+
         for (const localCommand of localCommands) {
             const { name, description, options } = localCommand;
 
@@ -37,6 +39,8 @@ module.exports = async (client) => {
                 console.log(`✅ Registered command "${name}"`);
             }
         }
+
+        console.log('✅ Successfully registered the commands!')
     } catch (error) {
         console.log(`Command registry error: ${error}`);   
     }

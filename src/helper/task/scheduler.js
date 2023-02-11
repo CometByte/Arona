@@ -7,12 +7,15 @@ module.exports = {
             if (cron.validate(config[key].frequency)) {
 
                 if (!config[key].active) return;
-    
-                console.log(`Task "${config[key].path}" has been initialized...`);
-
+                
+                console.log(`➕ Task "${config[key].path}" has been initialized...`);
+                
                 cron.schedule(config[key].frequency, () => {
                     const task = require(resolve('src/tasks/', config[key].path))
                     task(client);
+                }, {
+                    scheduled: true,
+                    timezone: 'Asia/Manila'
                 });
             }
         });    

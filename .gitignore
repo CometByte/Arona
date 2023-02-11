@@ -1,5 +1,7 @@
 # Files
+*.zip
 .env
+.env.prod
 *.code-workspace
 config.json
 database.json
@@ -7,9 +9,11 @@ database.dev.json
 database.prod.json
 config.dev.json
 config.prod.json
+*.xlsx
 
 # Folders
 /backup-codes
+/resources
 
 # Defaults
 .vagrant/

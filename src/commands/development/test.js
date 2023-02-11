@@ -1,3 +1,5 @@
+const aronaGreeting = require('../../tasks/hourly-greeting');
+
 require('dotenv').config();
 
 module.exports = {
@@ -5,13 +7,15 @@ module.exports = {
     description: 'a command for testing features',
     devOnly: true,
     testOnly: true,
+    // deleted: <true | false>
     // options: Object[],
 
     callback: async (client, interaction) => {
-        const channel = await client.channels.fetch(process.env.WELCOME_CHANNEL_ID);
+        await interaction.deferReply();
+        await interaction.fetchReply();
 
-        channel.send({
-            content: `Welcome, <@${interaction.user.id}>-sensei`
-        });
+        aronaGreeting(client);
+
+        interaction.editReply("Test executed successfully!");
     },
 };

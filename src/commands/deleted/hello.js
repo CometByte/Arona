@@ -5,7 +5,7 @@ module.exports = {
     description: 'Greet Arona',
     // devOnly: <true | false>,
     // testOnly: <true | false>,
-    // deleted: <true | false>
+    deleted: true,
     // options: Object[],
     permissionsRequired: [],
     botPermissions: [],
