@@ -1,4 +1,4 @@
-const config = require('./../../helper/task/cron-config');
+const config = require('./../../configs/cron-config');
 const scheduler = require('./../../helper/task/scheduler');
 
 module.exports = (client) => {

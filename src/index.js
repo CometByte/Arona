@@ -15,10 +15,10 @@ const client = new Client({
 (async () => {
     try {
         // Connect to MongoDB
-        // console.log("\n🔁 Attempting to connect to the database...");
-        // mongoose.set('strictQuery', false);
-        // await mongoose.connect(process.env.CONNECTION_STRING, { keepAlive: true });
-        // console.log("✅ Successfully connected to the Sanctum Tower's database!");
+        console.log("\n🔁 Attempting to connect to the database...");
+        mongoose.set('strictQuery', false);
+        await mongoose.connect(process.env.CONNECTION_STRING, { keepAlive: true });
+        console.log("✅ Successfully connected to the Sanctum Tower's database!");
 
         // Register Events
         console.log("\n🔁 Registering events...");

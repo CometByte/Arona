@@ -1,4 +1,4 @@
-const { devs, testServer } = require('../../../config.json');
+const { devs, testServer } = require('../../configs/config.json');
 const getLocalCommands = require('../../helper/getLocalCommands')
 
 module.exports = async (client, interaction) => {

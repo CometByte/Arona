@@ -4,22 +4,22 @@ module.exports = {
         let datetime;
 
         if (!timeZone)
-            datetime = new Date().toLocaleString('sv-SE').replace('lördag, ', '');
+            datetime = new Date().toLocaleString('sv-SE');
         else 
-            datetime = new Date().toLocaleString('sv-SE', options).replace('lördag, ', '');
-            
-        return datetime;
+            datetime = new Date().toLocaleString('sv-SE', options);
+
+        return datetime.substring(datetime.length - 19);
     },
     getDate: (timeZone = null) => {
-        var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZone: timeZone };
+        var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric', timeZone: timeZone };
         let datetime;
 
         if (!timeZone)
-            datetime = new Date().toLocaleDateString('sv-SE').replace('lördag, ', '');
+            datetime = new Date().toLocaleDateString('sv-SE');
         else 
-            datetime = new Date().toLocaleDateString('sv-SE', options).replace('lördag, ', '');
-            
-        return datetime;
+            datetime = new Date().toLocaleDateString('sv-SE', options);
+
+        return datetime.substring(datetime.length - 10);
     },
     getTime: (timeZone = null) => {
         if (!timeZone)

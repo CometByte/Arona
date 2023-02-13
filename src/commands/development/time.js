@@ -60,7 +60,7 @@ module.exports = {
                             value: dateExtras.getTime(timeZone)
                         },
                     );
-                    
+        
         interaction.reply({embeds: [embed]});
     },
 };
