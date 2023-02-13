@@ -55,7 +55,7 @@ module.exports = {
 
         if (!server) {
             interaction.channel.send({
-                content: `Sensei! It seems your club isn't registered in the database yet.\nAllow me too register your club in the database.`
+                content: `Sensei! It seems your club isn't registered in the database yet.\nAllow me to register your club in the database.`
             });
 
             const newServer = new Server({
