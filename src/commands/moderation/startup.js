@@ -11,7 +11,7 @@ module.exports = {
     description: 'Wake me up... Note: Passwords are case sensitive, Sensei.',
     // devOnly: <true | false>,
     // testOnly: <true | false>,
-    // deleted: <true | false>
+    // deleted: true,
     options: [
         {
             name: 'password-one',
@@ -47,7 +47,7 @@ module.exports = {
         }
 
         interaction.editReply({
-            content: 'Oh! Sensei welcome back!',
+            content: `Oh! <@${interaction.user.id}>-sensei welcome back!`,
         });
 
         // Check if server is existing
@@ -74,7 +74,7 @@ module.exports = {
                 });
             } else {
                 interaction.channel.send({
-                    content: 'Sensei!! There seems to be a problem in registering your club.\nPlease try again later... Sorry >w< ...'
+                    content: 'Sensei!! There seems to be a problem in registering your club.\nPlease try again later... Sorry >w<'
                 });
             }
         } else {
@@ -86,7 +86,7 @@ module.exports = {
                 });
             } else {
                 interaction.channel.send({
-                    content: 'Sensei!! There seems to be a problem in updating your club.\nPlease try again later... Sorry >w< ...'
+                    content: 'Sensei!! There seems to be a problem in updating your club.\nPlease try again later... Sorry >w<'
                 });
             }
         }
