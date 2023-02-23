@@ -15,6 +15,7 @@ app/tester.js
 # Folders
 /backup-codes
 /resources
+/build
 
 # Defaults
 .vagrant/
