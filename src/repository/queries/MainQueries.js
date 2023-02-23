@@ -39,4 +39,31 @@ module.exports = {
             return null;
         }
     },
+    getBirthdayChannels: async () => {
+        try {
+            return await Server.find({ "birthday_active": true, "birthday_id": {$ne : null}}, 'server_name birthday_id');
+        } catch (error) {
+            console.log(`Error in "getBirthdayChannels" function`);
+            console.log(error);
+            return null;
+        }
+    },
+    getReminderChannels: async () => {
+        try {
+            return await Server.find({ "reminder_active": true, "reminder_id": {$ne : null} }, 'server_name reminder_id' );
+        } catch (error) {
+            console.log(`Error in "getReminderChannels" function`);
+            console.log(error);
+            return null;
+        }
+    },
+    getHourlyChannels: async () => {
+        try {
+            return await Server.find({ "hourly_active": true, "hourly_id": {$ne : null}}, 'server_name hourly_id');
+        } catch (error) {
+            console.log(`Error in "getHourlyChannels" function`);
+            console.log(error);
+            return null;
+        }
+    },
 }

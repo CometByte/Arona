@@ -1,6 +1,10 @@
 const { Schema, model } = require('mongoose');
 
 const studentSchema = new Schema({
+    query_name: {
+        type: String,
+        required: true,
+    },
     first_name: {
         type: String,
         required: true,
@@ -34,6 +38,9 @@ const studentSchema = new Schema({
     birth_month: {
         type: Number,
     },
+    birth_date: { 
+        type: Date, 
+    },
     height_cm: {
         type: Number,
     },
@@ -58,6 +65,12 @@ const studentSchema = new Schema({
     },
     portrait: {
         type: String,
+    },
+    portrait_artist: {
+        type: String, 
+    },
+    portrait_source: {
+        type: String, 
     },
 });
 

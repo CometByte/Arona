@@ -1,6 +1,6 @@
 const JSZip = require('jszip');
 const fs = require('fs');
-const { name, version } = require('./package.json');
+const { name, version } = require('../package.json');
 
 const _files = ['.env.prod', 'package.json', 'package-lock.json'];
 const _src = 'src/';

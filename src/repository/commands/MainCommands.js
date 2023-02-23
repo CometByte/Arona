@@ -28,7 +28,7 @@ module.exports = {
             let response = "Zzz...."
 
             if (!existing)
-                return "It seems your club isn't registered yet, Sensei...\nPlease do /startup to register your club...";
+                return "It seems your club isn't registered yet, Sensei...\nPlease do **/startup** to register your club...";
             
             switch (reminderType) {
                 case 'hourly':
