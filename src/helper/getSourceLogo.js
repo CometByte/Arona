@@ -1,3 +1,4 @@
+require('dotenv').config()
 module.exports = (sourceName = "") => {
     switch (sourceName.toLowerCase()) {
         case 'twitter':
@@ -7,6 +8,6 @@ module.exports = (sourceName = "") => {
             return 'https://i.imgur.com/cbKNx43.png';
 
         default: // default image
-            return 'https://i.imgur.com/UOCqFio.png'
+            return process.env.SOURCE_DEFAULT_IMG;
     }
 };
