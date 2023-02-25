@@ -291,7 +291,10 @@ module.exports = [
         height_cm: 160,
         artist: "DoReMi",
         seiyuu: "Kondō Reina / 近藤玲奈",
-        playable: true
+        playable: true,
+        portrait: "https://i.ibb.co/0C5yQ3c/aru.png",
+        portrait_artist: "DoReMi",
+        portrait_source: "Official"
     },
     {
         query_name: "Aru (New Year)",
@@ -309,7 +312,10 @@ module.exports = [
         height_cm: 160,
         artist: "DoReMi",
         seiyuu: "Kondō Reina / 近藤玲奈",
-        playable: true
+        playable: true,
+        portrait: "https://i.ibb.co/R9mVc5P/aru-new-year.png",
+        portrait_artist: "DoReMi",
+        portrait_source: "Official"
     },
     {
         query_name: "Chinatsu",
@@ -413,7 +419,10 @@ module.exports = [
         height_cm: 163,
         artist: "whoisshe",
         seiyuu: "Azusa Tadokoro / 田所あずさ",
-        playable: true
+        playable: true,
+        portrait: "https://i.ibb.co/t3VX4V6/haruna.png",
+        portrait_artist: "whoisshe",
+        portrait_source: "Official"
     },
     {
         query_name: "Haruna (New Year)",
@@ -431,7 +440,10 @@ module.exports = [
         height_cm: 163,
         artist: "whoisshe",
         seiyuu: "Azusa Tadokoro / 田所あずさ",
-        playable: true
+        playable: true,
+        portrait: "https://i.ibb.co/0JXfMLN/haruna-new-year.png",
+        portrait_artist: "whoisshe",
+        portrait_source: "Official"
     },
     {
         query_name: "Hina",
@@ -625,7 +637,10 @@ module.exports = [
         height_cm: 157,
         artist: "DoReMi",
         seiyuu: "Yukiyo Fujii / 藤井 ゆきよ",
-        playable: true
+        playable: true,
+        portrait: "https://i.ibb.co/VYdttq9/kayoko.png",
+        portrait_artist: "DoReMi",
+        portrait_source: "Official"
     },
     {
         query_name: "Megu",
@@ -815,7 +830,10 @@ module.exports = [
         height_cm: 156,
         artist: "tokki",
         seiyuu: "Tanaka Rie / 田中理惠",
-        playable: true
+        playable: true,
+        portrait: "https://i.ibb.co/5LqBs7W/mimori.png",
+        portrait_artist: "tokki",
+        portrait_source: "Official"
     },
     {
         query_name: "Pina",
@@ -988,7 +1006,10 @@ module.exports = [
         height_cm: 152,
         artist: "DoReMi",
         seiyuu: "Minami Tanaka / 田中美海",
-        playable: true
+        playable: true,
+        portrait: "https://i.ibb.co/w4KkpFK/arisu.png",
+        portrait_artist: "DoReMi",
+        portrait_source: "Official"
     },
     {
         query_name: "Asuna",
@@ -1005,7 +1026,10 @@ module.exports = [
         height_cm: 167,
         artist: "Mx2j",
         seiyuu: "Ikumi Hasegawa / 長谷川育美",
-        playable: true
+        playable: true,
+        portrait: "https://i.ibb.co/Htw0wRM/asuna.png",
+        portrait_artist: "Mx2j",
+        portrait_source: "Official"
     },
     {
         query_name: "Asuna (Bunny Girl)",
@@ -1023,7 +1047,10 @@ module.exports = [
         height_cm: 167,
         artist: "Mx2j",
         seiyuu: "Ikumi Hasegawa / 長谷川育美",
-        playable: true
+        playable: true,
+        portrait: "https://i.ibb.co/R4kq800/asuna-bunny.png",
+        portrait_artist: "Mx2j",
+        portrait_source: "Official"
     },
     {
         query_name: "Chihiro",
@@ -1367,7 +1394,10 @@ module.exports = [
         height_cm: 156,
         artist: "Hwansang",
         seiyuu: "Haruka Ran / 春花らん",
-        playable: true
+        playable: true,
+        portrait: "https://i.ibb.co/Jn6WY4L/yuuka.png",
+        portrait_artist: "Hwansang",
+        portrait_source: "Official"
     },
     {
         query_name: "Yuuka (Gym)",
@@ -1385,7 +1415,10 @@ module.exports = [
         height_cm: 156,
         artist: "Hwansang",
         seiyuu: "Haruka Ran / 春花らん",
-        playable: true
+        playable: true,
+        portrait: "https://i.ibb.co/mCGHTYz/yuuka-gym.png",
+        portrait_artist: "Hwansang",
+        portrait_source: "Official"
     },
     {
         query_name: "Yuzu",
