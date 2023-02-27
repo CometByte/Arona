@@ -1,12 +1,12 @@
 require('dotenv').config();
 const ChannelType = require('../repository/enums/ChannelType');
-const { logError } = require('../helper/Logger');
+const { logError, log } = require('../helper/Logger');
 const { getChannel, getReminderChannels } = require('../repository/queries/MainQueries');
 
 
 module.exports = async (client) => {
 
-    console.log("📋 global-reset executed!");
+    log("📋 global-reset executed!");
     try {
         // get reminder channel
         const reminderChannels = await getReminderChannels();
@@ -25,13 +25,13 @@ module.exports = async (client) => {
                         content: "Sensei! The day has been reset. Log in rewards are ready to be pick up."
                     });
                 } catch (error) {
-                    console.log(`Error in sending reset reminder in ${reminderChannel.server_name}'s reminder channel`);
-                    console.log(error);
+                    log(`Error in sending reset reminder in ${reminderChannel.server_name}'s reminder channel`);
+                    log(error);
                 }
             });
         }
     } catch (error) {
-        console.log('Error in running the task "global-reset"...');
+        log('Error in running the task "global-reset"...');
         logError("global-reset", error);
     }
 

@@ -3,11 +3,11 @@ const dateExtras = require('../helper/DateExtras');
 const aronaGreeting = require('../helper/aronaGreeting');
 const ChannelType = require('../repository/enums/ChannelType');
 const { getChannel, getHourlyChannels } = require('../repository/queries/MainQueries');
-const { logError } = require('../helper/Logger');
+const { logError, log } = require('../helper/Logger');
 
 module.exports = async (client) => {
 
-    console.log("📋 hourly-greeting executed!");
+    log("📋 hourly-greeting executed!");
     
     try {
         // get date and time
@@ -35,13 +35,13 @@ module.exports = async (client) => {
                         content: greeting
                     });
                 } catch (error) {
-                    console.log(`Error in sending hourly greeting in ${hourlyChannel.server_name}'s hourly channel`);
-                    console.log(error);
+                    log(`Error in sending hourly greeting in ${hourlyChannel.server_name}'s hourly channel`);
+                    log(error);
                 }
             });
         }
     } catch (error) {
-        console.log('Erorr in running the task "hourly-greeting"...');
+        log('Erorr in running the task "hourly-greeting"...');
         logError("birthday-reminder", error);
     }
 };

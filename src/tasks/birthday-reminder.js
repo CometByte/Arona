@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { logError } = require('../helper/Logger');
+const { logError, log } = require('../helper/Logger');
 const { getBirthdayChannels, getReminderChannels } = require('../repository/queries/MainQueries');
 const { getStudentsWithBirthday, getStudentsUpcomingBirthday } = require('../repository/queries/StudentQueries');
 const { Embed, EmbedBuilder } = require('discord.js');
@@ -8,7 +8,7 @@ const DateExtras = require('../helper/DateExtras');
 
 module.exports = async (client) => {
 
-    console.log("📋 birthday-reminder executed!");
+    log("📋 birthday-reminder executed!");
     try {
         const birthdayChannels = await getBirthdayChannels();
         const reminderChannels = await getReminderChannels();
@@ -80,8 +80,8 @@ module.exports = async (client) => {
                         embeds: birthdayEmbeds
                     });
                 } catch (error) {
-                    console.log(`Error in sending birthday cards in ${birthdayChannel.server_name}'s birthday channel`);
-                    console.log(error);
+                    log(`Error in sending birthday cards in ${birthdayChannel.server_name}'s birthday channel`);
+                    log(error);
                 }
             });
         }
@@ -101,13 +101,13 @@ module.exports = async (client) => {
                         embeds: [upcomingEmbed]
                     });
                 } catch (error) {
-                    console.log(`Error in sending birthday reminder in ${reminderChannel.server_name}'s reminder channel`);
-                    console.log(error);
+                    log(`Error in sending birthday reminder in ${reminderChannel.server_name}'s reminder channel`);
+                    log(error);
                 }
             });
         }   
     } catch (error) {
-        console.log('Erorr in running the task "birthday-reminder"...');
+        log('Erorr in running the task "birthday-reminder"...');
         logError("birthday-reminder", error);
     }
 };

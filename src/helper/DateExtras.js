@@ -90,6 +90,16 @@ module.exports = {
     birthdayCountdown: (birthDate) => {
         var dateName = module.exports.dateToWord(birthDate) 
         var daysLeft = module.exports.dateDifference(birthDate)
-        return dateName + " - " + (daysLeft < 1 ? "few hours left 🕑" : daysLeft + ` day${daysLeft > 1 ? "s" : ""} left 🗓`)
+
+        var intervalMessage = "";
+        if (daysLeft < 0)
+            intervalMessage = "today is her birthday! 🎉";
+        else if (daysLeft < 1)
+            intervalMessage = "few hours left... 🕑";
+        else
+            intervalMessage = daysLeft + ` day${daysLeft > 1 ? "s" : ""} left 🗓`;
+
+        var message = dateName + " - " + intervalMessage;
+        return message;
     }
 }

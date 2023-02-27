@@ -1,4 +1,5 @@
 require('dotenv').config();
+const { getDateTime } = require('./DateExtras');
 
 module.exports = {
     logError: async (message, stackTrace) => {
@@ -15,7 +16,11 @@ module.exports = {
                 content: errorMessage
             });
         } catch (error) {
-            console.log("Unable to send error logs");
+            module.exports.log("Unable to send error logs");
         }
+    },
+    log: (message = "") => {
+        if (message !== "")
+            console.log(`[${getDateTime('Asia/Manila')}] ${message}`);
     },
 };
